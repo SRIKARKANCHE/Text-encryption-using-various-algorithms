@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EncryptionStuff">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="736.0">
+         <children>
+            <Button layoutX="77.0" layoutY="39.0" mnemonicParsing="false" onAction="#onActionEncrypt" text="Encrypt" />
+            <Label layoutX="123.0" layoutY="102.0" text="Text Field" />
+            <TextField fx:id="dataTxt" layoutX="251.0" layoutY="98.0" />
+            <Label layoutX="137.0" layoutY="147.0" text="Key " />
+            <TextField fx:id="keyTxt" layoutX="251.0" layoutY="143.0" />
+            <Button layoutX="159.0" layoutY="39.0" mnemonicParsing="false" onAction="#onActionDecrypt" text="Decrypt" />
+            <RadioButton fx:id="AESRBtn" layoutX="217.0" layoutY="337.0" mnemonicParsing="false" text="AES">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Encryption" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="DesRBtn" layoutX="400.0" layoutY="337.0" mnemonicParsing="false" text="3Des" toggleGroup="$Encryption" />
+            <Label layoutX="560.0" layoutY="55.0" text="Result" />
+            <TextArea fx:id="result" layoutX="474.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
